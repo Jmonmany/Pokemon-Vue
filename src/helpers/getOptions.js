@@ -6,7 +6,7 @@ const getPokemons = () => {
   // will return a list of 650 numbers that will be used after sorted randomly to get 4 pokemon ids
 };
 
-const getPokemonsOptions = async () => {
+const getPokemonOptions = async () => {
   const mixedPokemons = getPokemons().sort(() => Math.random() - 0.5);
   const pokemons = await getPokemonsName(mixedPokemons.splice(0, 4));
   return pokemons;
@@ -30,4 +30,4 @@ const getPokemonsName = async ([a, b, c, d] = []) => {
     // this array of promises is passed to Promise.all to get the data of the 4 pokemons.
 };
 
-export default getPokemonsOptions;
+export default getPokemonOptions;
