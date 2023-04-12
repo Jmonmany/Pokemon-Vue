@@ -16,18 +16,18 @@ const getPokemonOptions = async () => {
 };
 
 const getPokemonsName = async ([a, b, c, d] = []) => {
-    const pokemonPromises = [a, b, c, d].map((id) => pokemonApi.get(`/${id}`));
-    const [pokemonA, pokemonB, pokemonC, pokemonD] = await Promise.all(
-        pokemonPromises
-    );
-    return [
-        { id: pokemonA.data.id, name: pokemonA.data.name },
-        { id: pokemonB.data.id, name: pokemonB.data.name },
-        { id: pokemonC.data.id, name: pokemonC.data.name },
-        { id: pokemonD.data.id, name: pokemonD.data.name },
-    ];
-    // At the beginning we recieve a list of 4 pokemon ids and we map them to get a list of promises.
-    // this array of promises is passed to Promise.all to get the data of the 4 pokemons.
+  const pokemonPromises = [a, b, c, d].map((id) => pokemonApi.get(`/${id}`));
+  const [pokemonA, pokemonB, pokemonC, pokemonD] = await Promise.all(
+    pokemonPromises
+  );
+  return [
+    { id: pokemonA.data.id, name: pokemonA.data.name },
+    { id: pokemonB.data.id, name: pokemonB.data.name },
+    { id: pokemonC.data.id, name: pokemonC.data.name },
+    { id: pokemonD.data.id, name: pokemonD.data.name },
+  ];
+  // At the beginning we recieve a list of 4 pokemon ids and we map them to get a list of promises.
+  // this array of promises is passed to Promise.all to get the data of the 4 pokemons.
 };
 
 export default getPokemonOptions;

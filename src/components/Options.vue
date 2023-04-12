@@ -1,9 +1,10 @@
 <template>
   <div class="options-container">
     <ul>
-      <li v-for="pokemon in pokeOptions" :key="pokemon.id">
+      <li v-for="pokemon in pokeOptions" :key="pokemon.id" @click="$emit('selection', pokemon.id)">
         {{ pokemon.name }}
       </li>
+      <!-- the $emit method is used to emit an event to the parent component -->
     </ul>
   </div>
 </template>
