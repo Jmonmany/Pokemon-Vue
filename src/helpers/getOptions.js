@@ -1,6 +1,6 @@
 import pokemonApi from "@/api/pokemonApi";
 
-const getPokemons = () => {
+export const getPokemons = () => {
   const pokemonArr = Array.from(Array(650));
   return pokemonArr.map((_, index) => index + 1);
   // will return a list of 650 numbers that will be used after sorted randomly to get 4 pokemon ids
@@ -15,7 +15,7 @@ const getPokemonOptions = async () => {
   // Finally we return the list of 4 pokemons with their Ids and names.
 };
 
-const getPokemonsName = async ([a, b, c, d] = []) => {
+export const getPokemonsName = async ([a, b, c, d] = []) => {
   const pokemonPromises = [a, b, c, d].map((id) => pokemonApi.get(`/${id}`));
   const [pokemonA, pokemonB, pokemonC, pokemonD] = await Promise.all(
     pokemonPromises

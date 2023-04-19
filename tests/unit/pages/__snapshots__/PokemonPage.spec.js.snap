@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonPage.vue component should match the snapshot AFTER render component with some pokemons 1`] = `
+<div>
+  <h1>Who is this Pokemon?</h1>
+  <div class="pokemon-container"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="pokemon" class="hidden">
+    <!--v-if-->
+  </div>
+  <!-- this component will receive the pokemonId and showPokemon props. It will be responsible for displaying the pokemon shadow image and
+  only reveal the pokemon image when showPokemon is true. -->
+  <div class="options-container">
+    <ul>
+      <li>bulbasaur</li>
+      <li>ivysaur</li>
+      <li>venusaur</li>
+      <li>charmander</li><!-- the $emit method is used to emit an event to the parent component -->
+    </ul>
+  </div><!-- this component will be responsible for displaying the options for the user to choose from. To do so needs getOptions helper-->
+  <!-- selection method is a custom method we create on Options.vue -->
+  <!--v-if-->
+  <!-- we can substitute <div v-if> tag with template tag, to avoid unnecessary divs in the DOM -->
+</div>
+`;

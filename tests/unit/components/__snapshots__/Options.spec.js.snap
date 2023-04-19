@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options.vue component should match with snapshot 1`] = `
+<div class="options-container">
+  <ul>
+    <li>bulbasaur</li>
+    <li>ivysaur</li>
+    <li>venusaur</li>
+    <li>charmander</li><!-- the $emit method is used to emit an event to the parent component -->
+  </ul>
+</div>
+`;
